@@ -1,0 +1,108 @@
+Allon Finezilber - Mike Ferrera 
+CS214
+Project 2 - Sorted List
+
+----------
+Test Plan:
+----------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A) I created a List of integers and printed the list
+
+    int a = 13;
+    int b = 4;
+    int c = 24;
+    int d = 64;
+    int f = 122;
+    int g = 53;
+
+    printf("%d\n",*(int*)SLNextItem(SlInt));
+    printf("%d\n",*(int*)SLNextItem(SlInt));
+    printf("%d\n",*(int*)SLNextItem(SlInt));
+    printf("%d\n",*(int*)SLNextItem(SlInt));
+    printf("%d\n",*(int*)SLNextItem(SlInt));
+    printf("%d\n",*(int*)SLNextItem(SlInt));
+
+
+----------
+Output:
+----------
+122
+64
+53
+24
+13
+4
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+B) Created a list of strings and added and removes random nodes
+
+    char *string1 = "panda";
+    char *string2 = "tiger";
+    char *string3 = "sloth";
+    char *string4 = "dog";
+    char *string5 = "hamster";
+    char *string6 = "kangaroo";
+
+    printf("\n%s\n",(char*)SLNextItem(SLString));
+    printf("%s\n",(char*)SLNextItem(SLString));
+    printf("%s\n",(char*)SLNextItem(SLString));
+    printf("%s\n",(char*)SLNextItem(SLString));
+
+----------
+Output:
+----------
+tiger
+kangaroo
+hamster
+dog
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C) Finally we added different items into a list to see if the iterator will output the currect values
+
+    int h = 21;
+    int i = 32;
+    int j = 43;
+    int k = 54;
+    int l = 65;
+    int m = 76;
+    int n = 87;
+    int o = 98;
+    int p = 102;
+    int q = 113;
+    int r = 124;
+    int s = 136;
+
+    printf("\n%d\n",*(int*)SLNextItem(SlFinal));
+    printf("%d\n",*(int*)SLNextItem(SlFinal));
+    printf("%d\n",*(int*)SLNextItem(SlFinal));
+    printf("%d\n",*(int*)SLNextItem(SlFinal));
+    printf("%d\n",*(int*)SLNextItem(SlFinal));
+    SLRemove(lastList, &b);
+    SLRemove(lastList, &g);
+    printf("%d\n",*(int*)SLNextItem(SlFinal));
+    printf("%d\n",*(int*)SLNextItem(SlFinal));
+    printf("%d\n",*(int*)SLNextItem(SlFinal));
+    SLRemove(lastList, &i);
+    printf("%d\n",*(int*)SLNextItem(SlFinal));
+    printf("%d\n",*(int*)SLNextItem(SlFinal));
+    SLRemove(lastList, &j);    
+    printf("%d\n",*(int*)SLNextItem(SlFinal));
+
+----------
+Output:
+----------
+
+136
+124
+113
+102
+98
+87
+76
+65
+54
+43
+21
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
